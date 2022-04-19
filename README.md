@@ -1,1 +1,1 @@
-# project-promo-p-module-3-team-5
+# react-starter-kit-template
