@@ -1,0 +1,79 @@
+<fieldset class="fieldset collapsed js-form-fieldset fill__fieldset">
+  <div class="fill__title js-form-title">
+    <i class="fa-solid fa-keyboard fill__keyboard"></i>
+    <p class="fill__legend">Rellena</p>
+    <i class="fieldset__arrow fa-solid fa-chevron-down fill__arrow"></i>
+  </div>
+
+  <div class="fieldset__container fill__container">
+    <label class="form__label" for="name">Nombre completo</label>
+    <input
+      class="form__field js__fillIn__name"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Ej: Sally Jill"
+      maxlength="20"
+      required
+    />
+    <label class="form__label" for="job">Puesto</label>
+    <input
+      class="form__field js__fillIn__job"
+      type="text"
+      id="job"
+      name="job"
+      placeholder="Ej: Front-end unicorn"
+      maxlength="24"
+      required
+    />
+
+    <label class="form__label form__img" for="img"> Imagen de perfil </label>
+
+    <span class="span__row">
+      <label for="file-upload" class="subir js__profile-trigger"
+        >Añadir imagen</label
+      >
+      <input
+        class="js__profile-upload-btn"
+        type="file"
+        name="image"
+        id="file-upload"
+        style="display: none"
+      />
+      <div class="form__box js__profile-preview"></div>
+    </span>
+
+    <label class="form__label js_email" for="email" required>Email</label>
+    <input
+      class="form__field"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Ej: sally-hill@gmail.com"
+    />
+    <label class="form__label" for="telephone" required>Teléfono</label>
+    <input
+      class="form__field js_phone"
+      type="“tel”"
+      id="“telephone"
+      name="phone"
+      placeholder="Ej: 55-555-55"
+    />
+    <label class="form__label" for="text">Linkedin</label>
+    <input
+      class="form__field js_linkedin"
+      type="text"
+      id="linkedin"
+      name="linkedin"
+      placeholder="Ej: linkedin.con/in/sally.hill"
+    />
+    <label class="form__label" for="text">Github</label>
+    <input
+      class="form__field js_github"
+      type="text"
+      id="github"
+      name="github"
+      placeholder="Ej: @sally-hill"
+    />
+  </div>
+</fieldset>
