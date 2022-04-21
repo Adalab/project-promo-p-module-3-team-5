@@ -20,7 +20,20 @@ function App() {
       ...dataCard,
       [inputChanged]: inputValue,
     });
-    console.log(dataCard);
+    // console.log(dataCard);
+  };
+
+  const handleResetBtn = () => {
+    setDataCard({
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+      photo: '',
+    });
   };
 
   return (
@@ -39,7 +52,12 @@ function App() {
           <div className="preview-box">
             <section className="preview-box__container">
               <i className="fa-solid fa-trash-can preview-box__container--img"></i>
-              <button className="preview-box__container--button">reset</button>
+              <button
+                className="preview-box__container--button"
+                onClick={handleResetBtn}
+              >
+                reset
+              </button>
             </section>
             <section className="preview-box__containerphoto">
               <section className="containercard">
