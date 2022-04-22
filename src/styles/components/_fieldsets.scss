@@ -6,8 +6,8 @@
   transform: rotate(540deg);
 }
 
-.palette1 {
-  .outline {
+.palette3 {
+  .rectangle {
     background-color: $faded-orange;
   }
   .name {
@@ -22,7 +22,7 @@
   }
 }
 .palette2 {
-  .outline {
+  .rectangle {
     background-color: $rusty-red;
   }
   .name {
@@ -36,8 +36,8 @@
     }
   }
 }
-.palette3 {
-  .outline {
+.palette1 {
+  .rectangle {
     background-color: $dirty-blue;
   }
   .name {

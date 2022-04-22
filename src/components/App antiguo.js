@@ -41,7 +41,7 @@ function App() {
       <header className="header">
         <img
           className="header__img"
-          src="./assets/images/boolean logo.png"
+          src="./assets/images/tarjetas-molonas.png"
           alt="Logo imagenes"
           title="Logo imagenes"
         />
@@ -50,7 +50,7 @@ function App() {
       <section className="box-preview">
         <section className="preview-section">
           <div className="preview-box">
-            <section className="preview-box__container js__reset">
+            <section className="preview-box__container">
               <i className="fa-solid fa-trash-can preview-box__container--img"></i>
               <button
                 className="preview-box__container--button"
@@ -59,54 +59,53 @@ function App() {
                 reset
               </button>
             </section>
-
             <section className="preview-box__containerphoto">
-              <section className="containercard palette1 js-palette">
+              <section className={"containercard palette" + dataCard.palette}>
                 <article className="containercard__box">
-                  <div className="rectangle outline"></div>
+                  <div className="js-rectangle rectangle grey "></div>
                   <div className="container-tex">
-                    <h2 className="container-tex__title js__card__name name">
+                    <h2 className="container-tex__title js__card__name color name">
                       {dataCard.name || "Nombre Apellidos"}
                     </h2>
-                    <p className="container-tex__paragraph js__card__job">
+                    <p className="container-tex__paragraph js__card__job color">
                       {dataCard.job || "Front-end developer"}
                     </p>
                   </div>
                 </article>
-                <div className="preview-box__containerphoto--img js__profile-image"></div>
+                <div className="preview-box__containerphoto--img"></div>
                 <ul className="preview-list">
-                  <li className="preview-list__item icon">
+                  <li className="preview-list__item js-preview-list border icon">
                     <a
-                      className="preview-list__item--link"
+                      className="preview-list__item--link link"
                       href={`tel:${dataCard.phone}`}
                     >
-                      <i className="fa-solid fa-mobile-screen-button link"></i>
+                      <i className="fa-solid fa-mobile-screen-button color js-icons"></i>
                     </a>
                   </li>
-                  <li className="preview-list__item icon">
+                  <li className="preview-list__item js-preview-list border">
                     <a
                       className="preview-list__item--link"
                       href={`mailto:${dataCard.email}`}
                     >
-                      <i className="fa-regular fa-envelope link"></i>
+                      <i className="fa-regular fa-envelope color js-icons"></i>
                     </a>
                   </li>
-                  <li className="preview-list__item icon">
+                  <li className="preview-list__item js-preview-list border">
                     <a
                       className="preview-list__item--link"
                       target="blank"
                       href={`${dataCard.linkedin}`}
                     >
-                      <i className="fa-brands fa-linkedin-in link"></i>
+                      <i className="fa-brands fa-linkedin-in color js-icons"></i>
                     </a>
                   </li>
-                  <li className="preview-list__item icon">
+                  <li className="preview-list__item js-preview-list border">
                     <a
                       className="preview-list__item--link"
                       target="blank"
                       href={`${dataCard.github}`}
                     >
-                      <i className="fa-brands fa-github-alt link"></i>
+                      <i className="fa-brands fa-github-alt color js-icons"></i>
                     </a>
                   </li>
                 </ul>
@@ -116,15 +115,17 @@ function App() {
         </section>
 
         <section className="section-form">
-          <form action="" className="js_form">
+          <form action="">
             <fieldset className="fieldset js-form-fieldset fieldset-colours">
               <section className="design js-form-title">
                 <div className="design__box">
+                  {/* <!--className="window-title"--> */}
                   <a href="http://">
                     <i className="fa-solid fa-object-ungroup window design__box--window"></i>
                   </a>
 
                   <legend className="design__box--title">Diseña</legend>
+                  {/* <!--className="design-title"--> */}
                 </div>
 
                 <i className="fieldset__arrow fa-solid fa-chevron-down design__box--arrow"></i>
@@ -144,7 +145,7 @@ function App() {
                       checked={dataCard.palette === "1"}
                       onChange={handleInput}
                     />
-                    <label forHtml="colors"></label>
+                    <label htmlFor="colors"></label>
                     <input
                       name="palette"
                       id="palette-2"
@@ -154,7 +155,7 @@ function App() {
                       checked={dataCard.palette === "2"}
                       onChange={handleInput}
                     />
-                    <label forHtml="colors"></label>
+                    <label htmlFor="colors"></label>
 
                     <input
                       name="palette"
@@ -165,7 +166,7 @@ function App() {
                       checked={dataCard.palette === "3"}
                       onChange={handleInput}
                     />
-                    <label forHtml="colors"></label>
+                    <label htmlFor="colors"></label>
                   </div>
 
                   <section className="colours-list">
@@ -191,7 +192,7 @@ function App() {
               </section>
             </fieldset>
 
-            <fieldset className="fieldset  js-form-fieldset fill__fieldset">
+            <fieldset className="fieldset js-form-fieldset fill__fieldset">
               <div className="fill__title js-form-title">
                 <i className="fa-solid fa-keyboard fill__keyboard"></i>
                 <p className="fill__legend">Rellena</p>
@@ -199,7 +200,7 @@ function App() {
               </div>
 
               <div className="fieldset__container fill__container">
-                <label className="form__label" forHtml="name">
+                <label className="form__label" htmlFor="name">
                   Nombre completo
                 </label>
                 <input
@@ -207,12 +208,11 @@ function App() {
                   type="text"
                   id="name"
                   name="name"
-                  maxlength="20"
                   placeholder="Ej: Sally Jill"
                   onChange={handleInput}
                   value={dataCard.name}
                 />
-                <label className="form__label" forHtml="job">
+                <label className="form__label" htmlFor="job">
                   Puesto
                 </label>
                 <input
@@ -220,39 +220,31 @@ function App() {
                   type="text"
                   id="job"
                   name="job"
-                  maxlength="24"
                   placeholder="Ej: Front-end unicorn"
                   onChange={handleInput}
                   value={dataCard.job}
                 />
 
-                <label className="form__label form__img" forHtml="img">
+                <label className="form__label form__img" htmlFor="img">
                   {" "}
                   Imagen de perfil{" "}
                 </label>
 
                 <span className="span__row">
-                  <label
-                    forHtml="file-upload"
-                    className="subir js__profile-trigger"
-                  >
+                  <label htmlFor="file-upload" className="subir">
                     Añadir imagen
                   </label>
                   <input
-                    className="js__profile-upload-btn"
                     type="file"
-                    name="image"
+                    name=""
                     id="file-upload"
                     style={{ display: "none" }}
                   />
-                  <div className="form__box js__profile-preview"></div>
+
+                  <div className="form__box"></div>
                 </span>
 
-                <label
-                  className="form__label js_email"
-                  forHtml="email"
-                  required
-                >
+                <label className="form__label" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -264,7 +256,7 @@ function App() {
                   onChange={handleInput}
                   value={dataCard.email}
                 />
-                <label className="form__label" forHtml="telephone" required>
+                <label className="form__label" htmlFor="“phone”">
                   Teléfono
                 </label>
                 <input
@@ -276,7 +268,7 @@ function App() {
                   onChange={handleInput}
                   value={dataCard.phone}
                 />
-                <label className="form__label" forHtml="text">
+                <label className="form__label" htmlFor="text">
                   Linkedin
                 </label>
                 <input
@@ -288,7 +280,7 @@ function App() {
                   onChange={handleInput}
                   value={dataCard.linkedin}
                 />
-                <label className="form__label" forHtml="text">
+                <label className="form__label" htmlFor="text">
                   Github
                 </label>
                 <input
@@ -303,7 +295,7 @@ function App() {
               </div>
             </fieldset>
 
-            <fieldset className="fieldset  js-form-fieldset share__fieldset">
+            <fieldset className="fieldset js-form-fieldset share__fieldset">
               <div className="share__title1 js-form-title">
                 <a href="http://">
                   <i className="fa-solid fa-share-nodes share__share"></i>
@@ -318,16 +310,16 @@ function App() {
                   <button className="container__button">Crear tarjeta</button>
                 </div>
                 <article className="share__article js-share-article hidden">
-                  <h2 className="share__title js_message_error">
-                    La tarjeta ha sido creada:
-                  </h2>
-                  <a className="js_URL share__link" href=""></a>
+                  <h2 className="share__title">La tarjeta ha sido creada:</h2>
+                  <a
+                    className="share__link"
+                    href="https://awesome-profile-card.com?id=A456DF0001"
+                  >
+                    https://awesome-profile-card.com?id=A456DF0001
+                  </a>
                   <div className="share__twitter">
                     <i className="fa-brands fa-twitter"></i>
-                    <button
-                      className="share__button js_twitterShareBtn"
-                      disabled
-                    >
+                    <button className="share__button">
                       Compartir en twitter
                     </button>
                   </div>
@@ -342,7 +334,7 @@ function App() {
         <p className="footer__text">Awesome profile-cards ©2022</p>
         <img
           className="footer__img"
-          src="./assets/images/favicon-32x32.png"
+          src="./assets/images/logo-adalab.png"
           alt=""
         />
       </footer>
