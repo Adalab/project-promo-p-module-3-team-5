@@ -1,5 +1,7 @@
 import '../styles/main.scss';
 import { useState } from 'react';
+import logo from '../images/boolean_logo.png';
+import bottomFavicon from '../images/favicon-32x32.png';
 
 function App() {
   const [dataCard, setDataCard] = useState({
@@ -41,7 +43,7 @@ function App() {
       <header className="header">
         <img
           className="header__img"
-          src="./assets/images/boolean logo.png"
+          src={logo}
           alt="Logo imagenes"
           title="Logo imagenes"
         />
@@ -342,11 +344,7 @@ function App() {
 
       <footer className="footer">
         <p className="footer__text">Awesome profile-cards ©2022</p>
-        <img
-          className="footer__img"
-          src="./assets/images/favicon-32x32.png"
-          alt=""
-        />
+        <img className="footer__img" src={bottomFavicon} alt="" />
       </footer>
     </>
   );
