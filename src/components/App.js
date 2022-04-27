@@ -72,9 +72,9 @@ function App() {
         <CardPreview data={dataCard} />
 
         <section className="section-form">
-          <form action="" className="js_form">
-            <fieldset className="fieldset js-form-fieldset fieldset-colours">
-              <section className="design js-form-title">
+          <form action="" className="">
+            <fieldset className="fieldset  fieldset-colours">
+              <section className="design ">
                 <div className="design__box">
                   <a href="http://">
                     <i className="fa-solid fa-object-ungroup window design__box--window"></i>
@@ -95,7 +95,7 @@ function App() {
                       name="palette"
                       id="palette-1"
                       type="radio"
-                      className="inputs js-inputColor1"
+                      className="inputs "
                       value="1"
                       checked={dataCard.palette === '1'}
                       onChange={handleInput}
@@ -105,7 +105,7 @@ function App() {
                       name="palette"
                       id="palette-2"
                       type="radio"
-                      className="inputs js-inputColor2"
+                      className="inputs "
                       value="2"
                       checked={dataCard.palette === '2'}
                       onChange={handleInput}
@@ -116,7 +116,7 @@ function App() {
                       name="palette"
                       id="palette-3"
                       type="radio"
-                      className="inputs js-inputColor3"
+                      className="inputs "
                       value="3"
                       checked={dataCard.palette === '3'}
                       onChange={handleInput}
@@ -126,29 +126,29 @@ function App() {
 
                   <section className="colours-list">
                     <ul className="list-1">
-                      <li className="colour-1a js-color-1a"></li>
-                      <li className="colour-1b js-color-1b"></li>
-                      <li className="colour-1c js-color-1c"></li>
+                      <li className="colour-1a "></li>
+                      <li className="colour-1b "></li>
+                      <li className="colour-1c "></li>
                     </ul>
 
                     <ul className="list-3">
-                      <li className="colour-2a js-color-2a"></li>
-                      <li className="colour-2b js-color-2b"></li>
-                      <li className="colour-2c js-color-2c"></li>
+                      <li className="colour-2a "></li>
+                      <li className="colour-2b "></li>
+                      <li className="colour-2c "></li>
                     </ul>
 
                     <ul className="list-3">
-                      <li className="colour-3a js-color-3a"></li>
-                      <li className="colour-3b js-color-3b"></li>
-                      <li className="colour-3c js-color-3c"></li>
+                      <li className="colour-3a "></li>
+                      <li className="colour-3b "></li>
+                      <li className="colour-3c"></li>
                     </ul>
                   </section>
                 </section>
               </section>
             </fieldset>
 
-            <fieldset className="fieldset  js-form-fieldset fill__fieldset">
-              <div className="fill__title js-form-title">
+            <fieldset className="fieldset   fill__fieldset">
+              <div className="fill__title ">
                 <i className="fa-solid fa-keyboard fill__keyboard"></i>
                 <p className="fill__legend">Rellena</p>
                 <i className="fieldset__arrow fa-solid fa-chevron-down fill__arrow"></i>
@@ -159,7 +159,7 @@ function App() {
                   Nombre completo
                 </label>
                 <input
-                  className="form__field js__fillIn__name"
+                  className="form__field "
                   type="text"
                   id="name"
                   name="name"
@@ -172,7 +172,7 @@ function App() {
                   Puesto
                 </label>
                 <input
-                  className="form__field js__fillIn__job"
+                  className="form__field"
                   type="text"
                   id="job"
                   name="job"
@@ -188,27 +188,20 @@ function App() {
                 </label>
 
                 <span className="span__row">
-                  <label
-                    htmlFor="file-upload"
-                    className="subir js__profile-trigger"
-                  >
+                  <label htmlFor="file-upload" className="subir ">
                     Añadir imagen
                   </label>
                   <input
-                    className="js__profile-upload-btn"
+                    className=""
                     type="file"
                     name="image"
                     id="file-upload"
                     style={{ display: 'none' }}
                   />
-                  <div className="form__box js__profile-preview"></div>
+                  <div className="form__box "></div>
                 </span>
 
-                <label
-                  className="form__label js_email"
-                  htmlFor="email"
-                  required
-                >
+                <label className="form__label " htmlFor="email" required>
                   Email
                 </label>
                 <input
@@ -259,8 +252,8 @@ function App() {
               </div>
             </fieldset>
 
-            <fieldset className="fieldset  js-form-fieldset share__fieldset">
-              <div className="share__title1 js-form-title">
+            <fieldset className="fieldset   share__fieldset">
+              <div className="share__title1 ">
                 <a href="http://">
                   <i className="fa-solid fa-share-nodes share__share"></i>
                 </a>
@@ -269,7 +262,7 @@ function App() {
               </div>
 
               <div className="fieldset__container share__containerposition">
-                <div className="share__container js-share-container">
+                <div className="share__container ">
                   <i className="fa-solid fa-address-card fa-lg container__icon"></i>
                   <button
                     className="container__button"
@@ -278,12 +271,10 @@ function App() {
                     Crear tarjeta
                   </button>
                 </div>
-                <article className="share__article js-share-article ">
-                  <h2 className="share__title js_message_error">
-                    La tarjeta ha sido creada:
-                  </h2>
+                <article className="share__article  ">
+                  <h2 className="share__title ">La tarjeta ha sido creada:</h2>
                   <a
-                    className="js_URL share__link"
+                    className=" share__link"
                     href={apiData.cardURL}
                     target="blank"
                   >
@@ -292,10 +283,7 @@ function App() {
 
                   <div className="share__twitter">
                     <i className="fa-brands fa-twitter"></i>
-                    <button
-                      className="share__button js_twitterShareBtn"
-                      disabled
-                    >
+                    <button className="share__button " disabled>
                       Compartir en twitter
                     </button>
                   </div>

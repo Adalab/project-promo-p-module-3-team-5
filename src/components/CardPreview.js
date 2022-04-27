@@ -2,7 +2,7 @@ function CardPreview(props) {
   return (
     <section className="preview-section">
       <div className="preview-box">
-        <section className="preview-box__container js__reset">
+        <section className="preview-box__container ">
           <i className="fa-solid fa-trash-can preview-box__container--img"></i>
           <button
             className="preview-box__container--button"
@@ -13,21 +13,19 @@ function CardPreview(props) {
         </section>
 
         <section className="preview-box__containerphoto">
-          <section
-            className={`containercard palette${props.data.palette} js-palette`}
-          >
+          <section className={`containercard palette${props.data.palette} `}>
             <article className="containercard__box">
               <div className="rectangle outline"></div>
               <div className="container-tex">
-                <h2 className="container-tex__title js__card__name name">
+                <h2 className="container-tex__title  name">
                   {props.data.name || 'Nombre Apellidos'}
                 </h2>
-                <p className="container-tex__paragraph js__card__job">
+                <p className="container-tex__paragraph ">
                   {props.data.job || 'Front-end developer'}
                 </p>
               </div>
             </article>
-            <div className="preview-box__containerphoto--img js__profile-image"></div>
+            <div className="preview-box__containerphoto--img "></div>
             <ul className="preview-list">
               <li className="preview-list__item icon">
                 <a
