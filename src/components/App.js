@@ -6,7 +6,7 @@ import bottomFavicon from '../images/favicon-32x32.png';
 //Servicios
 import dataApi from '../servicies/api';
 
-//Componentes
+//Componente
 import CardPreview from './CardPreview';
 
 function App() {
