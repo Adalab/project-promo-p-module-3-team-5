@@ -1,13 +1,13 @@
 import '../styles/main.scss';
 import { useState } from 'react';
-import logo from '../images/boolean_logo.png';
-import bottomFavicon from '../images/favicon-32x32.png';
 
 //Servicios
 import dataApi from '../servicies/api';
 
 //Componente
 import CardPreview from './CardPreview';
+import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   //ESTADOS
@@ -59,14 +59,7 @@ function App() {
 
   return (
     <>
-      <header className="header">
-        <img
-          className="header__img"
-          src={logo}
-          alt="Logo imagenes"
-          title="Logo imagenes"
-        />
-      </header>
+      <Header />
 
       <section className="box-preview">
         <CardPreview data={dataCard} />
@@ -294,10 +287,7 @@ function App() {
         </section>
       </section>
 
-      <footer className="footer">
-        <p className="footer__text">Awesome profile-cards ©2022</p>
-        <img className="footer__img" src={bottomFavicon} alt="" />
-      </footer>
+      <Footer />
     </>
   );
 }
