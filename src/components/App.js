@@ -3,7 +3,14 @@ import { useState } from 'react';
 import logo from '../images/boolean_logo.png';
 import bottomFavicon from '../images/favicon-32x32.png';
 
+//Servicios
+import dataApi from '../servicies/api';
+
+//Componentes
+import CardPreview from './CardPreview';
+
 function App() {
+  //ESTADOS
   const [dataCard, setDataCard] = useState({
     palette: '1',
     name: '',
@@ -12,8 +19,12 @@ function App() {
     phone: '',
     linkedin: '',
     github: '',
-    photo: '',
+    photo: 'fgg',
   });
+
+  const [apiData, setApiData] = useState({});
+
+  //EVENTOS
 
   const handleInput = (ev) => {
     const inputValue = ev.target.value;
@@ -25,18 +36,26 @@ function App() {
     // console.log(dataCard);
   };
 
-  const handleResetBtn = () => {
-    setDataCard({
-      palette: '1',
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: '',
-      photo: '',
+  const handleClickCreateCard = (ev) => {
+    ev.preventDefault();
+    dataApi(dataCard).then((info) => {
+      console.log(info);
+      setApiData(info);
     });
   };
+
+  // const handleResetBtn = () => {
+  //   setDataCard({
+  //     palette: '1',
+  //     name: '',
+  //     job: '',
+  //     email: '',
+  //     phone: '',
+  //     linkedin: '',
+  //     github: '',
+  //     photo: '',
+  //   });
+  // };
 
   return (
     <>
@@ -50,74 +69,7 @@ function App() {
       </header>
 
       <section className="box-preview">
-        <section className="preview-section">
-          <div className="preview-box">
-            <section className="preview-box__container js__reset">
-              <i className="fa-solid fa-trash-can preview-box__container--img"></i>
-              <button
-                className="preview-box__container--button"
-                onClick={handleResetBtn}
-              >
-                reset
-              </button>
-            </section>
-
-            <section className="preview-box__containerphoto">
-              <section
-                className={`containercard palette${dataCard.palette} js-palette`}
-              >
-                <article className="containercard__box">
-                  <div className="rectangle outline"></div>
-                  <div className="container-tex">
-                    <h2 className="container-tex__title js__card__name name">
-                      {dataCard.name || 'Nombre Apellidos'}
-                    </h2>
-                    <p className="container-tex__paragraph js__card__job">
-                      {dataCard.job || 'Front-end developer'}
-                    </p>
-                  </div>
-                </article>
-                <div className="preview-box__containerphoto--img js__profile-image"></div>
-                <ul className="preview-list">
-                  <li className="preview-list__item icon">
-                    <a
-                      className="preview-list__item--link"
-                      href={`tel:${dataCard.phone}`}
-                    >
-                      <i className="fa-solid fa-mobile-screen-button link"></i>
-                    </a>
-                  </li>
-                  <li className="preview-list__item icon">
-                    <a
-                      className="preview-list__item--link"
-                      href={`mailto:${dataCard.email}`}
-                    >
-                      <i className="fa-regular fa-envelope link"></i>
-                    </a>
-                  </li>
-                  <li className="preview-list__item icon">
-                    <a
-                      className="preview-list__item--link"
-                      target="blank"
-                      href={`${dataCard.linkedin}`}
-                    >
-                      <i className="fa-brands fa-linkedin-in link"></i>
-                    </a>
-                  </li>
-                  <li className="preview-list__item icon">
-                    <a
-                      className="preview-list__item--link"
-                      target="blank"
-                      href={`${dataCard.github}`}
-                    >
-                      <i className="fa-brands fa-github-alt link"></i>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-            </section>
-          </div>
-        </section>
+        <CardPreview data={dataCard} />
 
         <section className="section-form">
           <form action="" className="js_form">
@@ -319,13 +271,25 @@ function App() {
               <div className="fieldset__container share__containerposition">
                 <div className="share__container js-share-container">
                   <i className="fa-solid fa-address-card fa-lg container__icon"></i>
-                  <button className="container__button">Crear tarjeta</button>
+                  <button
+                    className="container__button"
+                    onClick={handleClickCreateCard}
+                  >
+                    Crear tarjeta
+                  </button>
                 </div>
-                <article className="share__article js-share-article hidden">
+                <article className="share__article js-share-article ">
                   <h2 className="share__title js_message_error">
                     La tarjeta ha sido creada:
                   </h2>
-                  <a className="js_URL share__link" href=""></a>
+                  <a
+                    className="js_URL share__link"
+                    href={apiData.cardURL}
+                    target="blank"
+                  >
+                    {apiData.cardURL}
+                  </a>
+
                   <div className="share__twitter">
                     <i className="fa-brands fa-twitter"></i>
                     <button
