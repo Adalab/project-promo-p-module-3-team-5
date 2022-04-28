@@ -13,15 +13,17 @@ function CardPreview(props) {
         </section>
 
         <section className="preview-box__containerphoto">
-          <section className={`containercard palette${props.data.palette} `}>
+          <section
+            className={`containercard palette${props.dataCard.palette} `}
+          >
             <article className="containercard__box">
               <div className="rectangle outline"></div>
               <div className="container-tex">
                 <h2 className="container-tex__title  name">
-                  {props.data.name || 'Nombre Apellidos'}
+                  {props.dataCard.name || 'Nombre Apellidos'}
                 </h2>
                 <p className="container-tex__paragraph ">
-                  {props.data.job || 'Front-end developer'}
+                  {props.dataCard.job || 'Front-end developer'}
                 </p>
               </div>
             </article>
@@ -30,7 +32,7 @@ function CardPreview(props) {
               <li className="preview-list__item icon">
                 <a
                   className="preview-list__item--link"
-                  href={`tel:${props.data.phone}`}
+                  href={`tel:${props.dataCard.phone}`}
                 >
                   <i className="fa-solid fa-mobile-screen-button link"></i>
                 </a>
@@ -38,7 +40,7 @@ function CardPreview(props) {
               <li className="preview-list__item icon">
                 <a
                   className="preview-list__item--link"
-                  href={`mailto:${props.data.email}`}
+                  href={`mailto:${props.dataCard.email}`}
                 >
                   <i className="fa-regular fa-envelope link"></i>
                 </a>
@@ -47,7 +49,7 @@ function CardPreview(props) {
                 <a
                   className="preview-list__item--link"
                   target="blank"
-                  href={`${props.data.linkedin}`}
+                  href={`${props.dataCard.linkedin}`}
                 >
                   <i className="fa-brands fa-linkedin-in link"></i>
                 </a>
@@ -56,7 +58,7 @@ function CardPreview(props) {
                 <a
                   className="preview-list__item--link"
                   target="blank"
-                  href={`${props.data.github}`}
+                  href={`${props.dataCard.github}`}
                 >
                   <i className="fa-brands fa-github-alt link"></i>
                 </a>
