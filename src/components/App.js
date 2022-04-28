@@ -6,8 +6,8 @@ import dataApi from '../servicies/api';
 
 //Componente
 import CardPreview from './CardPreview';
-import Header from './Header';
-import Footer from './Footer';
+
+import Create from './Create';
 
 function App() {
   //ESTADOS
@@ -59,7 +59,9 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Create dataCard={dataCard} handleInput={handleInput} />
+
+      {/*<Header />
 
       <section className="box-preview">
         <CardPreview data={dataCard} />
@@ -287,7 +289,7 @@ function App() {
         </section>
       </section>
 
-      <Footer />
+      <Footer />*/}
     </>
   );
 }
