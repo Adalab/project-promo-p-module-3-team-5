@@ -68,7 +68,7 @@ function App() {
 
       <Create
         dataCard={dataCard}
-        //EL nombre de la propiedad del objeto y la funcion que paso como prop tiene que tener el mismo nombre si no no funciona
+        //EL nombre de la propiedad es lo que luego meto en el caminito del props en los componentes.
         handleInputParent={handleInputParent}
         handleClickCreateCardParent={handleClickCreateCardParent}
         /*Paso por props toda la api, podría pasar solo los datos que encesito*/
