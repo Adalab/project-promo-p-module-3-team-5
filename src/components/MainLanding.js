@@ -1,8 +1,10 @@
 import '../styles/components/MainLanding.scss';
 
+import { Link } from 'react-router-dom';
+
 function MainLanding() {
   return (
-    <>
+    <div className="main">
       <article>
         <img
           className="main__img"
@@ -40,11 +42,12 @@ function MainLanding() {
           </ul>
         </nav>
       </article>
-      <a className="main__button" href="./card.html">
-        {' '}
+      {/* <a className="main__button" href="./card.html"> */}
+      <Link to="/Create" className="main__button">
         Comenzar
-      </a>
-    </>
+      </Link>
+      {/* </a> */}
+    </div>
   );
 }
 

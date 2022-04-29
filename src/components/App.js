@@ -68,7 +68,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route
-          path="/card"
+          path="/create"
           element={
             <Create
               dataCard={dataCard}
