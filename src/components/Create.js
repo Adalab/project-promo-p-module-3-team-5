@@ -11,56 +11,28 @@ function Create(props) {
       <Header />
 
       <section className="box-preview">
+        {/*CARD PREVIEW :Solo le tengo que pasar los datos de mis constante de estado donde tengo mi objeto con los datos que son variables*/}
         <CardPreview dataCard={props.dataCard} />
 
         <section className="section-form">
           <form action="" className="">
-            <Design dataCard={props.dataCard} handleInput={props.handleInput} />
-            <Fill dataCard={props.dataCard} handleInput={props.handleInput} />
-            <Share
+            {/*DESIGN : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y la función de HANDLE INPUT PARENT para que DESIGN pueda ejecutarla y reenviar esos datos*/}
+            <Design
               dataCard={props.dataCard}
-              handleClickCreateCard={props.handleClickCreateCard}
-              apiData={props.apiData}
+              handleInputParent={props.handleInputParent}
+            />
+            {/*FILL : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y la función de HANDLE INPUT PARENT para que FILL pueda ejecutarla y reenviar esos datos*/}
+            <Fill
+              dataCard={props.dataCard}
+              handleInputParent={props.handleInputParent}
             />
 
-            <fieldset className="fieldset   share__fieldset">
-              <div className="share__title1 ">
-                <a href="http://">
-                  <i className="fa-solid fa-share-nodes share__share"></i>
-                </a>
-                <p className="share__legend">Comparte</p>
-                <i className="fieldset__arrow fa-solid fa-chevron-down share__arrow"></i>
-              </div>
-
-              <div className="fieldset__container share__containerposition">
-                <div className="share__container ">
-                  <i className="fa-solid fa-address-card fa-lg container__icon"></i>
-                  <button
-                    className="container__button"
-                    onClick={handleClickCreateCard}
-                  >
-                    Crear tarjeta
-                  </button>
-                </div>
-                <article className="share__article  ">
-                  <h2 className="share__title ">La tarjeta ha sido creada:</h2>
-                  <a
-                    className=" share__link"
-                    href={apiData.cardURL}
-                    target="blank"
-                  >
-                    {apiData.cardURL}
-                  </a>
-
-                  <div className="share__twitter">
-                    <i className="fa-brands fa-twitter"></i>
-                    <button className="share__button " disabled>
-                      Compartir en twitter
-                    </button>
-                  </div>
-                </article>
-              </div>
-            </fieldset>
+            {/*SHARE : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y que necesitaré para rellenar y compartir y la función de HANDLE CLICK CREATE CARD PARENT para que SHARE pueda ejecutarla y una vez haga Click llame a la API para que le devuelva la URL*/}
+            <Share
+              dataCard={props.dataCard}
+              handleClickCreateCardParent={props.handleClickCreateCardParent}
+              apiData={props.apiData}
+            />
           </form>
         </section>
       </section>
