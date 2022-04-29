@@ -12,7 +12,10 @@ function Create(props) {
 
       <section className="box-preview">
         {/*CARD PREVIEW :Solo le tengo que pasar los datos de mis constante de estado donde tengo mi objeto con los datos que son variables*/}
-        <CardPreview dataCard={props.dataCard} />
+        <CardPreview
+          dataCard={props.dataCard}
+          handleReset={props.handleReset}
+        />
 
         <section className="section-form">
           <form action="" className="">

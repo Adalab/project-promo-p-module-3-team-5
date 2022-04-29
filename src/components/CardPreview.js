@@ -6,7 +6,7 @@ function CardPreview(props) {
           <i className="fa-solid fa-trash-can preview-box__container--img"></i>
           <button
             className="preview-box__container--button"
-            // onClick={handleResetBtn}
+            onClick={props.handleReset}
           >
             reset
           </button>
