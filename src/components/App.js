@@ -1,4 +1,5 @@
-import '../styles/main.scss';
+import '../styles/App.scss';
+
 //import CardPreview from './CardPreview';
 import { useState } from 'react';
 
@@ -6,7 +7,11 @@ import { useState } from 'react';
 import dataApi from '../servicies/api';
 
 //Componente
+import Landing from './Landing';
 import Create from './Create';
+
+// Rutas
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   //ESTADOS
@@ -60,21 +65,29 @@ function App() {
 
   return (
     <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route
+          path="/card"
+          element={
+            <Create
+              dataCard={dataCard}
+              //EL nombre de la propiedad es lo que luego meto en el caminito del props en los componentes.
+              handleInputParent={handleInputParent}
+              handleClickCreateCardParent={handleClickCreateCardParent}
+              /*Paso por props toda la api, podría pasar solo los datos que encesito*/
+              apiData={apiData}
+              handleReset={handleResetBtn}
+            />
+          }
+        />
+      </Routes>
+
       {/*Nos quedamos solo con CREATE, que contiene: HEADER /FORM: DESIGN - FILL - SHARE / FOOTER}*/}
       {/*Le pasamos por PROPS:
     - CONTANTE DE ESTADO : DATACARD que contiene un objeto vacío que va cambiando con la interactividad de la usuaria*/}
       {/*Le pasamos por PROPS la función HANDLE INPUT PARENT que controla los botones de las peltas de colores - Y los inputs del formulario-   esta función se ejecutará en DESIGN  y en FILL*/}
       {/*Le pasamos por PROPS la función HANDLECLICK CREATE CARD PARENT - que controla los botones de las peltas de colores - Y los inputs del formulario-   esta función se ejecutará en DESIGN  y en FILL*/}
-
-      <Create
-        dataCard={dataCard}
-        //EL nombre de la propiedad es lo que luego meto en el caminito del props en los componentes.
-        handleInputParent={handleInputParent}
-        handleClickCreateCardParent={handleClickCreateCardParent}
-        /*Paso por props toda la api, podría pasar solo los datos que encesito*/
-        apiData={apiData}
-        handleReset={handleResetBtn}
-      />
     </>
   );
 }

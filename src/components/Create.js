@@ -5,6 +5,9 @@ import Share from './Share';
 import Header from './Header';
 import Footer from './Footer';
 
+import '../styles/components/Create.scss';
+import '../styles/components/Fieldsets.scss';
+
 function Create(props) {
   return (
     <>

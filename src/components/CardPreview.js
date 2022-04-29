@@ -1,3 +1,5 @@
+import '../styles/components/CardPreview.scss';
+
 function CardPreview(props) {
   return (
     <section className="preview-section">

@@ -1,3 +1,4 @@
+import '../styles/components/Header.scss';
 import logo from '../images/boolean_logo.png';
 
 const Header = (props) => {

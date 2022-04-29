@@ -1,3 +1,5 @@
+import '../styles/components/Share.scss';
+
 function Share(props) {
   const handleClickCreateCardChild = (ev) => {
     ev.preventDefault();

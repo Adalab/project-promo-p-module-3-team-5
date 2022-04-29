@@ -1,3 +1,5 @@
+import '../styles/components/Footer.scss';
+
 import bottomFavicon from '../images/favicon-32x32.png';
 
 const Footer = (props) => {
