@@ -4,6 +4,7 @@ import Fill from './Fill';
 import Share from './Share';
 import Header from './Header';
 import Footer from './Footer';
+import '../styles/components/create.scss';
 
 function Create(props) {
   return (

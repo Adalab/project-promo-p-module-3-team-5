@@ -1,3 +1,5 @@
+import '../styles/components/desings.scss';
+
 //Aqui tengo que escuchar los inputs de las paletas de colores. Me creo una funcion para escucharlo.
 // dentro de esta función llamo a la función que me mando la abuela - la madre - para guarda la información y que estas tambien la reciban.
 function Design(props) {
