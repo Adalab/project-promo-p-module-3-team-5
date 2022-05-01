@@ -1,23 +1,13 @@
-import CardPreview from './CardPreview';
 import Design from './Design';
 import Fill from './Fill';
 import Share from './Share';
-import Header from './Header';
-import Footer from './Footer';
+
 import '../styles/components/create.scss';
 
 function Create(props) {
   return (
     <>
-      <Header />
-
       <section className="box-preview">
-        {/*CARD PREVIEW :Solo le tengo que pasar los datos de mis constante de estado donde tengo mi objeto con los datos que son variables*/}
-        <CardPreview
-          dataCard={props.dataCard}
-          handleResetButton={props.handleResetButton}
-        />
-
         <section className="section-form">
           <form action="" className="">
             {/*DESIGN : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y la función de HANDLE INPUT PARENT para que DESIGN pueda ejecutarla y reenviar esos datos*/}
@@ -41,8 +31,6 @@ function Create(props) {
           </form>
         </section>
       </section>
-
-      <Footer />
     </>
   );
 }
