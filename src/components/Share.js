@@ -5,14 +5,24 @@ function Share(props) {
     ev.preventDefault();
     props.handleClickCreateCardParent();
   };
+  const handleClickCollapsable = (ev) => {
+    const collapsableCLicked = ev.target.id;
+    console.log(collapsableCLicked);
+  };
   return (
     <>
-      <fieldset className="fieldset   share__fieldset">
+      <fieldset
+        className="fieldset   share__fieldset"
+        id={props.id}
+        onClick={handleClickCollapsable}
+      >
         <div className="share__title1 ">
           <a href="http://">
             <i className="fa-solid fa-share-nodes share__share"></i>
           </a>
-          <p className="share__legend">Comparte</p>
+          <p className="share__legend" id="share">
+            Comparte
+          </p>
           <i className="fieldset__arrow fa-solid fa-chevron-down share__arrow"></i>
         </div>
 

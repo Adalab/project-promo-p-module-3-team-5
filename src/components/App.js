@@ -23,6 +23,8 @@ function App() {
 
   const [apiData, setApiData] = useState({});
 
+  const [designOpen, setDesignOpen] = useState(false);
+
   //EVENTOS
   //Esta función tengo que cambiarla. Porque AQUI NO escucho el EVENTO, lo escucho en DESIGN y en FILL ---por tanto  con ev.target.name --> me dice sobre cual input esto interactuando  ---- ev.target.value--> me da el valor de ese input ----todo esto lo recojo en el componente donde se escucha el evento DESIGN y FILL
   //creo objeto DATA con las propiedades name y value. le puedo poner las propiedades que quiera
@@ -58,6 +60,18 @@ function App() {
     });
   };
 
+  const handleToggleDesign = () => {
+    setDesignOpen(!designOpen);
+  };
+
+  /* const renderForm = ()=>{
+    if (designOpen === true){
+      return(
+
+      )
+    }
+  }*/
+
   return (
     <>
       {/*Nos quedamos solo con CREATE, que contiene: HEADER /FORM: DESIGN - FILL - SHARE / FOOTER}*/}
@@ -74,6 +88,7 @@ function App() {
         /*Paso por props toda la api, podría pasar solo los datos que encesito*/
         apiData={apiData}
         handleResetButton={handleResetBtn}
+        handleToggleDesign={handleToggleDesign}
       />
     </>
   );

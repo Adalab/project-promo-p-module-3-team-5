@@ -11,16 +11,28 @@ function Design(props) {
       name: ev.target.name,
     });
   };
+
+  const handleClickCollapsable = (ev) => {
+    const collapsableCLicked = ev.target.id;
+    console.log(collapsableCLicked);
+    props.handleToggleDesign();
+  };
   return (
     <>
-      <fieldset className="fieldset  fieldset-colours">
+      <fieldset
+        className="fieldset  fieldset-colours"
+        id={props.id}
+        onClick={handleClickCollapsable}
+      >
         <section className="design ">
           <div className="design__box">
             <a href="http://">
               <i className="fa-solid fa-object-ungroup window design__box--window"></i>
             </a>
 
-            <legend className="design__box--title">Diseña</legend>
+            <legend className="design__box--title" id="design">
+              Diseña
+            </legend>
           </div>
 
           <i className="fieldset__arrow fa-solid fa-chevron-down design__box--arrow"></i>

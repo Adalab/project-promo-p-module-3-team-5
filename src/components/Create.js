@@ -24,6 +24,7 @@ function Create(props) {
             <Design
               dataCard={props.dataCard}
               handleInputParent={props.handleInputParent}
+              handleToggleDesign={props.handleToggleDesign}
             />
             {/*FILL : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y la función de HANDLE INPUT PARENT para que FILL pueda ejecutarla y reenviar esos datos*/}
             <Fill
