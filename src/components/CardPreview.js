@@ -1,6 +1,9 @@
 import '../styles/components/profile-card.scss';
 
 function CardPreview(props) {
+  const handleResetBtn = () => {
+    props.handleResetButton();
+  };
   return (
     <section className="preview-section">
       <div className="preview-box">
@@ -8,7 +11,7 @@ function CardPreview(props) {
           <i className="fa-solid fa-trash-can preview-box__container--img"></i>
           <button
             className="preview-box__container--button"
-            // onClick={handleResetBtn}
+            onClick={handleResetBtn}
           >
             reset
           </button>

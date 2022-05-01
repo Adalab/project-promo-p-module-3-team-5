@@ -45,18 +45,18 @@ function App() {
     });
   };
 
-  // const handleResetBtn = () => {
-  //   setDataCard({
-  //     palette: '1',
-  //     name: '',
-  //     job: '',
-  //     email: '',
-  //     phone: '',
-  //     linkedin: '',
-  //     github: '',
-  //     photo: '',
-  //   });
-  // };
+  const handleResetBtn = () => {
+    setDataCard({
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+      photo: '',
+    });
+  };
 
   return (
     <>
@@ -73,6 +73,7 @@ function App() {
         handleClickCreateCardParent={handleClickCreateCardParent}
         /*Paso por props toda la api, podría pasar solo los datos que encesito*/
         apiData={apiData}
+        handleResetButton={handleResetBtn}
       />
     </>
   );
