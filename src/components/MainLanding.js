@@ -22,19 +22,19 @@ function MainLanding() {
         <nav className="nav">
           <ul className="nav__container">
             <li className="nav__list">
-              <a className="nav__link" href="./card.html">
+              <a className="nav__link" href="">
                 <i className="fa-solid fa-object-ungroup"></i>
               </a>
               <h2 className="nav__title">Diseña</h2>
             </li>
             <li className="nav__list">
-              <a className="nav__link" href="./card.html">
+              <a className="nav__link" href="">
                 <i className="fa-solid fa-keyboard"></i>
               </a>
               <h2 className="nav__title">Rellena</h2>
             </li>
             <li className="nav__list">
-              <a className="nav__link" href="./card.html">
+              <a className="nav__link" href="">
                 <i className="list-desing__icon fas fa-share-alt"></i>
               </a>
               <h2 className="nav__title">Comparte</h2>
@@ -42,11 +42,10 @@ function MainLanding() {
           </ul>
         </nav>
       </article>
-      {/* <a className="main__button" href="./card.html"> */}
+
       <Link to="/Create" className="main__button">
         Comenzar
       </Link>
-      {/* </a> */}
     </div>
   );
 }
