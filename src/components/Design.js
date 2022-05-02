@@ -1,5 +1,5 @@
 import '../styles/components/desings.scss';
-
+import '../styles/components/fieldsets.scss';
 //Aqui tengo que escuchar los inputs de las paletas de colores. Me creo una funcion para escucharlo.
 // dentro de esta función llamo a la función que me mando la abuela - la madre - para guarda la información y que estas tambien la reciban.
 function Design(props) {
@@ -13,26 +13,24 @@ function Design(props) {
   };
 
   const handleClickCollapsable = (ev) => {
-    const collapsableCLicked = ev.target.id;
-    console.log(collapsableCLicked);
-    props.handleToggleDesign();
+    const collapsableClicked = ev.currentTarget.id;
+    console.log(collapsableClicked);
+    props.handleToggleForms(collapsableClicked);
   };
   return (
     <>
       <fieldset
-        className="fieldset  fieldset-colours"
-        id={props.id}
+        className={`fieldset fieldset-colours ${props.designOpen}`}
+        id="design"
         onClick={handleClickCollapsable}
       >
-        <section className="design ">
+        <section className="design">
           <div className="design__box">
             <a href="http://">
               <i className="fa-solid fa-object-ungroup window design__box--window"></i>
             </a>
 
-            <legend className="design__box--title" id="design">
-              Diseña
-            </legend>
+            <legend className="design__box--title">Diseña</legend>
           </div>
 
           <i className="fieldset__arrow fa-solid fa-chevron-down design__box--arrow"></i>

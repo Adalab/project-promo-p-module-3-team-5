@@ -1,4 +1,5 @@
 import '../styles/components/share.scss';
+import '../styles/components/fieldsets.scss';
 
 function Share(props) {
   const handleClickCreateCardChild = (ev) => {
@@ -6,14 +7,15 @@ function Share(props) {
     props.handleClickCreateCardParent();
   };
   const handleClickCollapsable = (ev) => {
-    const collapsableCLicked = ev.target.id;
-    console.log(collapsableCLicked);
+    const collapsableClicked = ev.currentTarget.id;
+    console.log(collapsableClicked);
+    props.handleToggleForms(collapsableClicked);
   };
   return (
     <>
       <fieldset
-        className="fieldset   share__fieldset"
-        id={props.id}
+        className={`fieldset ${props.shareOpen}  share__fieldset`}
+        id="share"
         onClick={handleClickCollapsable}
       >
         <div className="share__title1 ">

@@ -1,4 +1,5 @@
 import '../styles/components/Fill_in.scss';
+import '../styles/components/fieldsets.scss';
 
 function Fill(props) {
   //Aqui tengo que escuchar los inputs de las del formulario. Me creo una funcion para escucharlo.
@@ -10,15 +11,16 @@ function Fill(props) {
     });
   };
   const handleClickCollapsable = (ev) => {
-    const collapsableCLicked = ev.target.id;
-    console.log(collapsableCLicked);
+    const collapsableClicked = ev.currentTarget.id;
+    console.log(collapsableClicked);
+    props.handleToggleForms(collapsableClicked);
   };
 
   return (
     <>
       <fieldset
-        className="fieldset   fill__fieldset"
-        id={props.id}
+        className={`fieldset ${props.fillOpen}  fill__fieldset`}
+        id="fill"
         onClick={handleClickCollapsable}
       >
         <div className="fill__title ">

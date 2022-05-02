@@ -24,12 +24,15 @@ function Create(props) {
             <Design
               dataCard={props.dataCard}
               handleInputParent={props.handleInputParent}
-              handleToggleDesign={props.handleToggleDesign}
+              designOpen={props.designOpen}
+              handleToggleForms={props.handleToggleForms}
             />
             {/*FILL : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y la función de HANDLE INPUT PARENT para que FILL pueda ejecutarla y reenviar esos datos*/}
             <Fill
               dataCard={props.dataCard}
               handleInputParent={props.handleInputParent}
+              fillOpen={props.fillOpen}
+              handleToggleForms={props.handleToggleForms}
             />
 
             {/*SHARE : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y que necesitaré para rellenar y compartir y la función de HANDLE CLICK CREATE CARD PARENT para que SHARE pueda ejecutarla y una vez haga Click llame a la API para que le devuelva la URL*/}
@@ -37,6 +40,8 @@ function Create(props) {
               dataCard={props.dataCard}
               handleClickCreateCardParent={props.handleClickCreateCardParent}
               apiData={props.apiData}
+              shareOpen={props.shareOpen}
+              handleToggleForms={props.handleToggleForms}
             />
           </form>
         </section>
