@@ -1,6 +1,6 @@
 import '../styles/main.scss';
 //import CardPreview from './CardPreview';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 //Servicios
 import dataApi from '../servicies/api';
