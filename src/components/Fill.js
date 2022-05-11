@@ -1,5 +1,4 @@
-import '../styles/components/Fill_in.scss';
-import '../styles/components/fieldsets.scss';
+import '../styles/components/Fill.scss';
 
 function Fill(props) {
   //Aqui tengo que escuchar los inputs de las del formulario. Me creo una funcion para escucharlo.

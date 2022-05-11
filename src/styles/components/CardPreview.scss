@@ -1,21 +1,19 @@
-.box-preview {
-  @include tablet() {
-    // width: fit-content;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom, $white-four, $white-two 9%);
-  }
-}
+
+@import '../core/Variables.scss';
+@import '../core/mixins.scss';
+
+
 
 .preview-section {
   padding: 38px 0 40px 0;
   background-color: $sand;
   @include tablet() {
     // width: 80vw;
-    width: 68vw;
-    height: 100vh;
+    // OJOCUIDAO !!!
+    width: 74vw;
+    height: 105vh;
+    // width: 68vw;
+    // height: 100vh;
     padding: 173px 0 260px 0;
     border-radius: 6px;
     display: flex;
@@ -77,7 +75,7 @@
       margin: 10px 0;
       width: 240px;
       height: 200px;
-      background: url('../images/imagen-chica.png');
+      background: url('../../images/imagen-chica.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -135,16 +133,3 @@
   }
 }
 
-.section-form {
-  background-color: $lightbrown;
-
-  @include tablet() {
-    width: 35vw;
-    max-width: 329px;
-  }
-
-  @include desktop() {
-    // TODO
-    max-width: 350px;
-  }
-}

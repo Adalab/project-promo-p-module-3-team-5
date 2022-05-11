@@ -1,4 +1,4 @@
-import '../styles/components/profile-card.scss';
+import '../styles/components/CardPreview.scss';
 
 function CardPreview(props) {
   const handleResetBtn = () => {

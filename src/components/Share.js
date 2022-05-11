@@ -1,5 +1,4 @@
-import '../styles/components/share.scss';
-import '../styles/components/fieldsets.scss';
+import '../styles/components/Share.scss';
 
 function Share(props) {
   const handleClickCreateCardChild = (ev) => {

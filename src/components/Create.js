@@ -4,7 +4,9 @@ import Fill from './Fill';
 import Share from './Share';
 import Header from './Header';
 import Footer from './Footer';
-import '../styles/components/create.scss';
+
+import '../styles/components/Create.scss';
+import '../styles/components/Fieldsets.scss';
 
 function Create(props) {
   return (
@@ -15,7 +17,7 @@ function Create(props) {
         {/*CARD PREVIEW :Solo le tengo que pasar los datos de mis constante de estado donde tengo mi objeto con los datos que son variables*/}
         <CardPreview
           dataCard={props.dataCard}
-          handleResetButton={props.handleResetButton}
+          handleReset={props.handleReset}
         />
 
         <section className="section-form">
