@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import '../core/Variables.scss';
 @import '../core/Mixins.scss';
 
@@ -23,3 +24,30 @@
     margin-top: 12px;
   }
 }
+=======
+@import '../core/Variables.scss';
+@import '../core/mixins.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0 20px;
+  background-color: $lightbrown;
+  @include tablet() {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 18px 40px 22px 41px;
+  }
+  &__text {
+    font-size: 14px;
+    color: $darkbrown;
+    font-family: $font-main;
+  }
+  &__img {
+    width: 70px;
+    margin-top: 12px;
+  }
+}
+>>>>>>> origin/joanna4

@@ -11,10 +11,20 @@ function Design(props) {
       name: ev.target.name,
     });
   };
+
+  const handleClickCollapsable = (ev) => {
+    const collapsableClicked = ev.currentTarget.id;
+    console.log(collapsableClicked);
+    props.handleToggleForms(collapsableClicked);
+  };
   return (
     <>
-      <fieldset className="fieldset  fieldset-colours">
-        <section className="design ">
+      <fieldset
+        className={`fieldset fieldset-colours ${props.designOpen}`}
+        id="design"
+        onClick={handleClickCollapsable}
+      >
+        <section className="design">
           <div className="design__box">
             <a href="http://">
               <i className="fa-solid fa-object-ungroup window design__box--window"></i>
