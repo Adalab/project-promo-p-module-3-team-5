@@ -9,12 +9,24 @@ function Fill(props) {
       name: ev.target.name,
     });
   };
+  const handleClickCollapsable = (ev) => {
+    const collapsableClicked = ev.currentTarget.id;
+    console.log(collapsableClicked);
+    props.handleToggleForms(collapsableClicked);
+  };
+
   return (
     <>
-      <fieldset className="fieldset   fill__fieldset">
+      <fieldset
+        className={`fieldset ${props.fillOpen}  fill__fieldset`}
+        id="fill"
+        onClick={handleClickCollapsable}
+      >
         <div className="fill__title ">
           <i className="fa-solid fa-keyboard fill__keyboard"></i>
-          <p className="fill__legend">Rellena</p>
+          <p className="fill__legend" id="fill">
+            Rellena
+          </p>
           <i className="fieldset__arrow fa-solid fa-chevron-down fill__arrow"></i>
         </div>
 
