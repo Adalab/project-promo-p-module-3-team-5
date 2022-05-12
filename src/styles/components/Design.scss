@@ -1,8 +1,5 @@
-
 @import '../core/Variables.scss';
-@import '../core/mixins.scss';
-
-
+@import '../core/Mixins.scss';
 
 .fieldset-colours {
   display: flex;
@@ -55,41 +52,41 @@
 }
 
 /*
-.container-design {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 1px solid $brownish-grey;
-  padding-top: 10px;
-  align-items: center;
-  padding-bottom: 10px;
-
-  @include tablet() {
-    max-width: 329px;
+  .container-design {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid $brownish-grey;
+    padding-top: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+  
+    @include tablet() {
+      max-width: 329px;
+    }
   }
-}
-
-.window-title {
-  display: flex;
-  align-items: center;
-}
-
-.window {
-  margin-right: 10px;
-  color: $dull-orange;
-}
-
-.design-title {
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: 'Open Sans';
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  color: $gunmetal;
-}
-*/
+  
+  .window-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .window {
+    margin-right: 10px;
+    color: $dull-orange;
+  }
+  
+  .design-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $gunmetal;
+  }
+  */
 
 .colour-section {
   display: flex;

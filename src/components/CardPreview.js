@@ -2,7 +2,7 @@ import '../styles/components/CardPreview.scss';
 
 function CardPreview(props) {
   const handleResetBtn = () => {
-    props.handleResetButton();
+    props.handleReset();
   };
   return (
     <section className="preview-section">
