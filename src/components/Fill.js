@@ -1,3 +1,4 @@
+import GetAvatar from './GetAvatar';
 import '../styles/components/Fill.scss';
 
 function Fill(props) {
@@ -63,19 +64,7 @@ function Fill(props) {
             Imagen de perfil{' '}
           </label>
 
-          <span className="span__row">
-            <label htmlFor="file-upload" className="subir ">
-              Añadir imagen
-            </label>
-            <input
-              className=""
-              type="file"
-              name="image"
-              id="file-upload"
-              style={{ display: 'none' }}
-            />
-            <div className="form__box "></div>
-          </span>
+          <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} />
 
           <label className="form__label " htmlFor="email" required>
             Email

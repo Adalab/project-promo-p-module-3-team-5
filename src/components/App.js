@@ -25,7 +25,7 @@ function App() {
       phone: '',
       linkedin: '',
       github: '',
-      photo: 'fgg',
+      photo: '',
     })
   );
 
@@ -35,6 +35,7 @@ function App() {
 
   const [fillOpen, setFillOpen] = useState('collapsed');
   const [shareOpen, setShareOpen] = useState('collapsed');
+  const [avatar, setAvatar] = useState('');
 
   //EVENTOS
 
@@ -78,8 +79,9 @@ function App() {
       phone: '',
       linkedin: '',
       github: '',
-      photo: 'fgg',
+      photo: '',
     });
+    setAvatar('');
   };
   const handleToggleForms = (collapsableClicked) => {
     if (collapsableClicked === 'design') {
@@ -103,6 +105,14 @@ function App() {
     }
   };
 
+  const updateAvatar = (avatar) => {
+    setAvatar(avatar);
+    setDataCard({
+      ...dataCard,
+      photo: avatar,
+    });
+  };
+
   return (
     <>
       <Routes>
@@ -122,6 +132,8 @@ function App() {
               fillOpen={fillOpen}
               shareOpen={shareOpen}
               handleToggleForms={handleToggleForms}
+              avatar={avatar}
+              updateAvatar={updateAvatar}
             />
           }
         />
