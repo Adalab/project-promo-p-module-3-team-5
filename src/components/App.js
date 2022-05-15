@@ -89,11 +89,19 @@ function App() {
         setDesignOpen('');
         setFillOpen('collapsed');
         setShareOpen('collapsed');
+      } else if (designOpen !== 'collapsed') {
+        setDesignOpen('collapsed');
+        setFillOpen('collapsed');
+        setShareOpen('collapsed');
       }
     } else if (collapsableClicked === 'fill') {
       if (fillOpen === 'collapsed') {
         setDesignOpen('collapsed');
         setFillOpen('');
+        setShareOpen('collapsed');
+      } else if (fillOpen !== 'collapsed') {
+        setDesignOpen('collapsed');
+        setFillOpen('collapsed');
         setShareOpen('collapsed');
       }
     } else if (collapsableClicked === 'share') {
@@ -101,6 +109,10 @@ function App() {
         setDesignOpen('collapsed');
         setFillOpen('collapsed');
         setShareOpen('');
+      } else if (shareOpen !== 'collapsed') {
+        setDesignOpen('collapsed');
+        setFillOpen('collapsed');
+        setShareOpen('collapsed');
       }
     }
   };
