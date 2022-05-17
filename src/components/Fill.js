@@ -64,7 +64,10 @@ function Fill(props) {
             Imagen de perfil{' '}
           </label>
 
-          <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} />
+          <GetAvatar
+            avatar={props.dataCard.photo}
+            updateAvatar={props.updateAvatar}
+          />
 
           <label className="form__label " htmlFor="email" required>
             Email

@@ -106,7 +106,6 @@ function App() {
   };
 
   const updateAvatar = (avatar) => {
-    setAvatar(avatar);
     setDataCard({
       ...dataCard,
       photo: avatar,

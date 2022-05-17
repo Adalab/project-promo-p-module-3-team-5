@@ -34,7 +34,7 @@ function CardPreview(props) {
               </div>
             </article>
             {/* <div className="preview-box__containerphoto--img "></div> */}
-            <Profile avatar={props.avatar} />
+            <Profile avatar={props.dataCard.photo} />
             <ul className="preview-list">
               <li className="preview-list__item icon">
                 <a

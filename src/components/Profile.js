@@ -9,7 +9,7 @@ function Profile(props) {
     <div className="profile">
       <div
         className="profile__avatar"
-        style={{ backgroundImage: `url(${avatar})` }}
+        style={{ backgroundImage: `url('${avatar}')` }}
       ></div>
     </div>
   );
