@@ -18,6 +18,7 @@ function Create(props) {
         <CardPreview
           dataCard={props.dataCard}
           handleReset={props.handleReset}
+          avatar={props.avatar}
         />
 
         <section className="section-form">
@@ -35,6 +36,8 @@ function Create(props) {
               handleInputParent={props.handleInputParent}
               fillOpen={props.fillOpen}
               handleToggleForms={props.handleToggleForms}
+              updateAvatar={props.updateAvatar}
+              avatar={props.avatar}
             />
 
             {/*SHARE : le paso los datos de mis constante de estado donde tengo mi objeto con los datos que son variables y que necesitaré para rellenar y compartir y la función de HANDLE CLICK CREATE CARD PARENT para que SHARE pueda ejecutarla y una vez haga Click llame a la API para que le devuelva la URL*/}
