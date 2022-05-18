@@ -36,6 +36,7 @@ function App() {
   const [fillOpen, setFillOpen] = useState('collapsed');
   const [shareOpen, setShareOpen] = useState('collapsed');
   const [avatar, setAvatar] = useState('');
+  const [share, setShare] = useState('hidden');
 
   //EVENTOS
 
@@ -64,9 +65,22 @@ function App() {
 
   const handleClickCreateCardParent = () => {
     dataApi(dataCard).then((info) => {
-      console.log(info);
       setApiData(info);
     });
+
+    if (
+      dataCard.palette !== '' &&
+      dataCard.name !== '' &&
+      dataCard.job !== '' &&
+      dataCard.email !== '' &&
+      dataCard.linkedin !== '' &&
+      dataCard.github !== '' &&
+      dataCard.photo !== ''
+    ) {
+      setShare('');
+    } else {
+      alert('Te quedan algunos campos por rellenar');
+    }
   };
 
   const handleResetBtn = () => {
@@ -83,6 +97,7 @@ function App() {
     });
     setAvatar('');
     setApiData('');
+    setShare('hidden');
   };
 
   const handleToggleForms = (collapsableClicked) => {
@@ -135,6 +150,7 @@ function App() {
               handleToggleForms={handleToggleForms}
               avatar={avatar}
               updateAvatar={updateAvatar}
+              share={share}
             />
           }
         />
