@@ -82,7 +82,9 @@ function App() {
       photo: '',
     });
     setAvatar('');
+    setApiData('');
   };
+
   const handleToggleForms = (collapsableClicked) => {
     if (collapsableClicked === 'design') {
       if (designOpen === 'collapsed') {
