@@ -47,12 +47,17 @@ function Share(props) {
               {props.apiData.cardURL}
             </a>
 
-            <div className="share__twitter">
+            <button className="share__twitter" disabled>
               <i className="fa-brands fa-twitter"></i>
-              <button className="share__button " disabled>
+              <a
+                className="share__twitter"
+                target="_blank"
+                rel="noreferrer"
+                href={`https://twitter.com/intent/tweet?text=He%20creado%20una%20tarjeta%20profesional.%20¡Conóceme!%20&url=${props.apiData.cardURL}`}
+              >
                 Compartir en twitter
-              </button>
-            </div>
+              </a>
+            </button>
           </article>
         </div>
       </fieldset>

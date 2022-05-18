@@ -110,6 +110,7 @@
   margin-bottom: 10px;
   text-decoration: none;
   text-align: center;
+  text-decoration: none;
 }
 .share__twitter {
   font-size: 14px;
@@ -121,6 +122,8 @@
   background-color: $darkbrown;
   text-align: center;
   color: $white-two;
+  text-decoration: none;
+  font-family: $font-main;
 }
 .fa-twitter {
   color: $lightbrown;
